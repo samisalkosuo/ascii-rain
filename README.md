@@ -10,8 +10,19 @@ Comfy rain for your console written in C with Ncurses.
 
 ## Dependencies 
 
-You'll need a ncurses library. For Ubuntu packages are: 'ncurses-dev' or 'libncurses-dev'.
-For OSX try `$ brew install ncurses`.
+You'll need a ncurses library. 
+
+For Ubuntu packages are:
+
+- 'ncurses-dev' or 'libncurses-dev'.
+
+For OSX try:
+
+- `brew install ncurses`.
+
+For Linux (Rocky Linux 8.4 at least):
+
+- `dnf -y install ncurses*`
 
 ## Build & Install
 
@@ -21,18 +32,18 @@ You can get it from the AUR right [here](https://aur.archlinux.org/packages/asci
 
 ## Manual
 
-First, download this repo:
-- `$ git clone https://github.com/nkleemann/ascii-rain.git` 
-- `$ cd ascii-rain`
-
-To compile and link 'rain':
-
-- `$ gcc rain.c -o rain -lncurses`
+- Clone this repo.
+- Compile and link rain:
+  - `gcc rain.c -o rain -lncurses`
+- Compile and link rain (no color check):
+  - `gcc rain-no-c-check.c -o rain -lncurses`
+- Compile and link color demo:
+  - `gcc color-demo.c -o color-demo -lncurses`
 
 Now you can run 'rain' in your current working directory by just executing: ` ./rain`.
 
-I you want to be able to run this program from every directory you have to copy the executable to `/usr/local/bin` or `/usr/bin`:
-- `$ cp rain /usr/local/bin/rain`
+If you want to be able to run this program from every directory you have to copy the executable to `/usr/local/bin` or `/usr/bin`:
+- `cp rain /usr/local/bin/rain`
 
 ## Notes & Troubleshooting
 
